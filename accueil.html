@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de bord Codelynx</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="img/logo-removebg-preview (1).png" type="image/x-icon">
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+
+        .sidebar {
+            min-width: 256px;
+            max-width: 256px;
+        }
+
+        .user-menu {
+            display: none;
+            position: absolute;
+            bottom: 80px;
+            left: 16px;
+            right: 16px;
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            z-index: 50;
+        }
+
+        .user-menu.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <div class="flex h-screen overflow-hidden">
+
+        <aside class="sidebar bg-white border-r flex flex-col relative">
+
+            <a href="accueil.html">
+                <div class="p-4 border-b flex items-center gap-3 flex-shrink-0">
+                    <div
+                        class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold text-sm">
+                        <img src="img/logo-removebg-preview (1).png" alt="">
+                    </div>
+                    <span class="font-semibold text-gray-900">Codelynx</span>
+                    <i class="bi bi-bell ml-auto text-gray-400"></i>
+                </div>
+            </a>
+
+
+            <div class="p-4 flex-shrink-0">
+                <div class="relative">
+                    <i class="bi bi-search absolute left-3 top-2.5 text-gray-400 text-sm"></i>
+                    <input type="text" placeholder="Rechercher"
+                        class="w-full pl-9 pr-3 py-2 border rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                </div>
+            </div>
+
+
+            <nav class="flex-1 overflow-y-auto px-2 pb-4">
+                <div class="text-xs text-gray-500 px-3 py-2 font-medium">Écoles</div>
+                <a href="#"
+                    class="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">
+                    <i class="bi bi-house text-base"></i>
+                    <span>Accueil</span>
+                </a>
+
+                <div class="text-xs text-gray-500 px-3 py-2 mt-4 font-medium">École Codelynx</div>
+                <a href="#"
+                    class="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">
+                    <i class="bi bi-grid text-base"></i>
+                    <span>Tableau de bord</span>
+                </a>
+                <a href="#"
+                    class="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">
+                    <i class="bi bi-book text-base"></i>
+                    <span>Cours</span>
+                </a>
+                <a href="#"
+                    class="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">
+                    <i class="bi bi-gear text-base"></i>
+                    <span>Paramètres</span>
+                </a>
+                <a href="#"
+                    class="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">
+                    <i class="bi bi-cart text-base"></i>
+                    <span>Commandes</span>
+                </a>
+                <a href="#"
+                    class="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">
+                    <i class="bi bi-people text-base"></i>
+                    <span>Affiliés</span>
+                </a>
+
+                <div class="text-xs text-gray-500 px-3 py-2 mt-4 font-medium">Début JavaScript</div>
+                <a href="#"
+                    class="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">
+                    <i class="bi bi-house text-base"></i>
+                    <span>Accueil</span>
+                </a>
+                <a href="#"
+                    class="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">
+                    <i class="bi bi-file-text text-base"></i>
+                    <span>Notes</span>
+                </a>
+                <a href="#"
+                    class="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">
+                    <i class="bi bi-book text-base"></i>
+                    <span>Leçons</span>
+                </a>
+                <a href="#"
+                    class="flex items-center gap-3 px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">
+                    <i class="bi bi-exclamation-circle text-base"></i>
+                    <span>Danger</span>
+                </a>
+            </nav>
+
+
+            <div id="userMenu" class="user-menu">
+                <div class="p-3 border-b">
+                    <div class="flex items-center gap-3 mb-3">
+
+                        <div class="min-w-0 flex-1">
+                            <div class="text-sm font-medium text-gray-900 truncate">Codeur</div>
+                            <div class="text-xs text-gray-500 truncate">ifran.prepa@gmail.com</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="py-2">
+                    <a href="profil.html"
+                        class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50">
+                        <i class="bi bi-gear text-base"></i>
+                        <span>Paramètres</span>
+                    </a>
+                    <a href="#"
+                        class="flex items-center justify-between gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50">
+                        <div class="flex items-center gap-3">
+                            <i class="bi bi-palette text-base"></i>
+                            <span>Thème</span>
+                        </div>
+                        <i class="bi bi-chevron-right text-xs"></i>
+                    </a>
+                    <a href="#"
+                        class="flex items-center justify-between gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50">
+                        <div class="flex items-center gap-3">
+                            <i class="bi bi-translate text-base"></i>
+                            <span>Langue</span>
+                        </div>
+                        <i class="bi bi-chevron-right text-xs"></i>
+                    </a>
+                    <a href="#"
+                        class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 border-t py-2">
+                        <i class="bi bi-house text-base"></i>
+                        <span>Accueil</span>
+                    </a>
+                    <a href="#"
+                        class="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50  border-t py-2">
+                        <i class="bi bi-question-circle text-base"></i>
+                        <span>Aide</span>
+                    </a>
+                </div>
+
+                <div class="border-t py-2">
+                    <a href="#" class="flex items-center gap-3 px-4 py-2.5 text-sm  hover:bg-red-50">
+                        <i class="bi bi-box-arrow-right text-base"></i>
+                        <span>Se déconnecter</span>
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="p-4 border-t flex-shrink-0 cursor-pointer hover:bg-gray-50" id="userProfileBtn">
+                <div class="flex items-center gap-3">
+                    <img src="img/2.png" class="w-10 h-10 rounded-full flex-shrink-0">
+                    <div class="min-w-0 flex-1">
+                        <div class="text-sm font-medium text-gray-900 truncate">Codeur</div>
+                        <div class="text-xs text-gray-500 truncate">ifran.prepa@gmail.com</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+
+        <main class="flex-1 overflow-y-auto">
+            <div class="p-6 max-w-[1400px] mx-auto">
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+                    <div class="bg-white rounded-xl shadow-sm p-5 border">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-sm text-gray-600">Leçons terminées</span>
+                            <div class="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center">
+                                <i class="bi bi-book text-gray-500 text-sm"></i>
+                            </div>
+                        </div>
+                        <div class="text-3xl font-bold text-gray-900 mb-1">13</div>
+                        <div class="text-xs text-gray-500">11.82% de toutes les leçons</div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-sm p-5 border">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-sm text-gray-600">Temps total passé</span>
+                            <div class="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center">
+                                <i class="bi bi-clock text-gray-500 text-sm"></i>
+                            </div>
+                        </div>
+                        <div class="text-3xl font-bold text-gray-900">3h 8m 3s</div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-sm p-5 border">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-sm text-gray-600">Votre classement</span>
+                            <div class="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center">
+                                <i class="bi bi-person text-gray-500 text-sm"></i>
+                            </div>
+                        </div>
+                        <div class="text-3xl font-bold text-gray-900 mb-1">586</div>
+                        <div class="text-xs text-gray-500">Vous avez complété 13 leçons jusqu'à présent, ce qui vous
+                            place au-dessus de 24%.
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-sm p-5 border">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-sm text-gray-600">Séries</span>
+                            <div class="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center">
+                                <i class="bi bi-fire text-gray-50 text-sm"></i>
+                            </div>
+                        </div>
+                        <div class="text-3xl font-bold text-gray-900 mb-1">0</div>
+                        <div class="text-xs text-gray-500">Vous n'avez pas encore de série d'activité.</div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+                    <div class="lg:col-span-2 space-y-6">
+
+                        <div
+                            class="bg-gradient-to-b from-yellow-50 via-yellow-100 to-black rounded-xl overflow-hidden shadow-sm">
+                            <div class="p-8 relative min-h-[200px] flex flex-col justify-between">
+
+                                <div class="flex justify-center">
+                                    <div class="px-6 py-1 rounded-full">
+                                        <span class="text-sm font-bold text-gray-900">PRO</span>
+                                    </div>
+                                </div>
+
+
+                                <div class="flex items-center gap-3">
+                                    <div
+                                        class="w-12 h-12 bg-yellow-400 rounded-xl flex items-center justify-center font-bold text-lg text-gray-900 flex-shrink-0">
+                                        JS
+                                    </div>
+                                    <div class="text-xl font-bold text-white">BeginJavaScript</div>
+                                </div>
+                            </div>
+
+
+                            <div class="bg-white rounded-t-xl shadow-sm p-5">
+                                <div class="flex justify-between items-center mb-3">
+                                    <span class="text-sm font-medium text-gray-700">💪 Exercices</span>
+                                    <span class="text-sm font-bold text-gray-900">12%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                    <div class="bg-yellow-400 h-2.5 rounded-full transition-all" style="width: 12%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="bg-white rounded-xl shadow-sm overflow-hidden border">
+                            <div class="p-6">
+                                <div class="flex justify-between items-start mb-5">
+                                    <div>
+                                        <div class="text-xs text-gray-500 mb-1">Current section</div>
+                                        <div class="text-lg font-bold text-gray-900">📝 Introduction</div>
+                                    </div>
+                                    <span class="text-yellow-500 text-sm font-semibold">Lessons</span>
+                                </div>
+
+                                <div class="space-y-3">
+                                    <div class="flex items-start gap-3 text-sm">
+                                        <span class="text-green-500 text-lg flex-shrink-0">✓</span>
+                                        <span class="text-gray-700">👋 Hello</span>
+                                    </div>
+                                    <div class="flex items-start gap-3 text-sm">
+                                        <span class="text-yellow-500 text-lg flex-shrink-0">💪</span>
+                                        <span class="text-gray-700">Exercices</span>
+                                    </div>
+                                    <div class="flex items-start gap-3 text-sm">
+                                        <span class="text-orange-500 text-lg flex-shrink-0">🎁</span>
+                                        <span class="text-gray-700">BONUS : Mindset de junior</span>
+                                    </div>
+                                    <div class="flex items-start gap-3 text-sm">
+                                        <span class="text-orange-500 text-lg flex-shrink-0">🎁</span>
+                                        <span class="text-gray-700">BONUS : Apprendre avec l'AI</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="space-y-6">
+
+                        <div class="bg-white rounded-xl shadow-sm p-6 border">
+                            <h3 class="text-lg font-bold text-gray-900 mb-4">Activités</h3>
+
+                            <div class="mb-4">
+                                <div class="flex text-xs text-gray-400 mb-2 pl-10">
+                                    <span class="flex-1 text-center">Juin</span>
+                                    <span class="flex-1 text-center">Juil</span>
+                                    <span class="flex-1 text-center">Août</span>
+                                    <span class="flex-1 text-center">Sep</span>
+                                    <span class="flex-1 text-center">Oct</span>
+                                    <span class="flex-1 text-center">Nov</span>
+                                </div>
+
+                                <div class="space-y-1.5">
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-xs text-gray-500 w-8">Lun</span>
+                                        <div class="flex-1 flex gap-1">
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-xs text-gray-500 w-8">Mer</span>
+                                        <div class="flex-1 flex gap-1">
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-500 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <span class="text-xs text-gray-500 w-8">Ven</span>
+                                        <div class="flex-1 flex gap-1">
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                            <div class="w-2 h-2 bg-yellow-50 rounded-sm"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="bg-white rounded-xl shadow-sm p-6 border">
+                            <div class="text-sm text-gray-500 mb-2">Temps passé au cours des 7 derniers jours</div>
+                            <div class="text-3xl font-bold text-gray-900">31m 55s</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Toggle user menu
+        const userProfileBtn = document.getElementById('userProfileBtn');
+        const userMenu = document.getElementById('userMenu');
+
+        userProfileBtn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            userMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function (e) {
+            if (!userMenu.contains(e.target) && !userProfileBtn.contains(e.target)) {
+                userMenu.classList.remove('active');
+            }
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+
+</html>

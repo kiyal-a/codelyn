@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link href="/src/style.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/logo-removebg-preview (1).png" type="image/x-icon">
+    <title>Codeline - Inscription</title>
+</head>
+
+<body
+    class="bg-[linear-gradient(135deg,#0f0f1f,#1a1a2d,#0e0e1a)] bg-no-repeat bg-cover min-h-screen flex items-center justify-center">
+
+    <section>
+        <div class="grid max-w-screen-xl px-4 mx-auto gap-8 py-16 grid-cols-12">
+
+
+            <div class="place-self-center col-span-7">
+                <h1 class="mb-4 font-extrabold text-6xl text-white">Codeline</h1>
+                <p class="font-light mb-8 text-xl text-gray-400">Créez des cours que les développeurs adorent.</p>
+
+                <p class="font-light text-lg mb-4 text-white">👨‍💻 Conçu par les développeurs</p>
+                <p class="font-light text-lg mb-4 text-white">Utilisation simple</p>
+                <p class="font-light text-lg mb-4 text-white">Utilisez votre propre Stripe</p>
+                <p class="font-light text-lg mb-4 text-white">Sans frais</p>
+
+                <a href="#" class="font-light text-gray-400">Besoin d'aide ? Contactez help@codeline.app</a>
+            </div>
+
+
+            <div class="block col-span-5 p-10 border-4 border-gray-900 shadow-2xl rounded-xl bg-gray-900">
+
+                <p class="text-white text-xl font-medium">Créez votre compte Codeline</p>
+                <p class="font-light mb-6 text-md text-gray-400">
+                    Ensuite, créez votre première école et commencez à élaborer vos cours.
+                </p>
+
+                <form class="space-y-4 md:space-y-6">
+                    <div>
+                        <label for="email" class="block mb-1 text-sm font-medium text-white">E-mail</label>
+
+                        <input type="email" name="email" id="email" placeholder="john@doe.com" required class="border text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 
+                     placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500">
+
+
+                        <a href="accueil.html"> <button id="loginBtn" type="button" class="w-full hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-primary-300 
+                     font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-white mt-2 transition-all">
+                                S'inscrire
+                            </button>
+                        </a>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        const btn = document.getElementById("loginBtn");
+
+        btn.addEventListener("click", () => {
+            btn.innerText = "Chargement...";
+            btn.classList.add("animate-pulse");
+
+            setTimeout(() => {
+                window.location.href = "index.html";
+            }, 800);
+        });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+
+</body>
+
+</html>

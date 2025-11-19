@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paramètres de Codeur</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="img/logo-removebg-preview (1).png" type="image/x-icon">
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+
+        .sidebar {
+            min-width: 212px;
+            max-width: 212px;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <div class="flex h-screen overflow-hidden">
+        <aside class="sidebar bg-white border-r flex flex-col">
+
+            <a href="accueil.html">
+                <div class="p-4 flex items-center gap-3">
+                    <div
+                        class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold text-sm">
+                        <img src="img/logo-removebg-preview (1).png" alt="">
+                    </div>
+                    <span class="font-semibold text-gray-900">Codelynx</span>
+                </div>
+            </a>
+
+
+            <div class="px-4 py-3 flex items-center justify-between cursor-pointer hover:bg-gray-50">
+                <span class="text-sm text-gray-700">Votre profil</span>
+                <i class="bi bi-chevron-down text-xs text-gray-500"></i>
+            </div>
+
+
+            <nav class="flex-1 px-2">
+                <a href="accueil.html"
+                    class="flex items-center gap-3 px-3 py-2.5 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">
+                    <i class="bi bi-house text-base"></i>
+                    <span>Accueil</span>
+                </a>
+                <a href="profil.html"
+                    class="flex items-center gap-3 px-3 py-2.5 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">
+                    <i class="bi bi-person text-base"></i>
+                    <span>Profil</span>
+                </a>
+                <a href="information.html"
+                    class="flex items-center gap-3 px-3 py-2.5 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">
+                    <i class="bi bi-credit-card text-base"></i>
+                    <span>Informations de facturation</span>
+                </a>
+                <a href="dange.html"
+                    class="flex items-center gap-3 px-3 py-2.5 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">
+                    <i class="bi bi-exclamation-circle text-base"></i>
+                    <span>Danger</span>
+                </a>
+            </nav>
+
+
+            <div class="p-4 border-t">
+                <div class="flex items-center gap-3">
+                    <img src="img/2.png" class="w-10 h-10 rounded-full">
+                    <div class="flex-1 min-w-0">
+                        <div class="text-sm font-medium text-gray-900 truncate">Codeur</div>
+                        <div class="text-xs text-gray-500 truncate">ifran.prepa@gmail.com</div>
+                    </div>
+                    <i class="bi bi-chevron-down text-xs text-gray-400"></i>
+                </div>
+            </div>
+        </aside>
+
+
+        <main class="flex-1 overflow-y-auto bg-gray-50">
+            <div class="p-8">
+
+                <div class="flex items-center justify-between mb-8">
+                    <h1 class="text-3xl font-bold text-gray-900">Paramètres de Codeur</h1>
+                    <button
+                        class="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50">
+                        Se déconnecter
+                    </button>
+                </div>
+
+
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 max-w-4xl">
+
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="relative">
+                            <img src="img/2.png" class="w-20 h-20 rounded-full border-4 border-white shadow-sm">
+                            <button
+                                class="absolute -top-1 -right-1 w-7 h-7 bg-black text-white rounded-full flex items-center justify-center hover:bg-gray-800 transition-colors">
+                                <i class="bi bi-x text-lg"></i>
+                            </button>
+                        </div>
+                        <div>
+                            <div class="text-lg font-semibold text-gray-900">Codeur</div>
+                        </div>
+                    </div>
+
+
+                    <div class="space-y-6">
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-900 mb-2">Nom</label>
+                            <input type="text" value="Codeur"
+                                class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                        </div>
+
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-900 mb-2">Nom d'utilisateur</label>
+                            <input type="text" value="Codeur"
+                                class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent">
+                        </div>
+
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-900 mb-2">
+                                Email
+                                <i class="bi bi-info-circle text-gray-400 ml-1 text-xs"></i>
+                            </label>
+                            <div class="text-sm text-gray-900 mb-3 px-1">ifran.prepa@gmail.com</div>
+                            <div class="flex gap-3">
+                                <button
+                                    class="px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">
+                                    Modifier l'email
+                                </button>
+                                <button
+                                    class="px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 rounded-lg transition-colors">
+                                    Modifier le mot de passe
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="flex justify-end mt-8">
+                        <button
+                            class="px-6 py-2.5 bg-black text-white text-sm font-medium rounded-lg hover:bg-gray-800 transition-colors">
+                            Enregistrer
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+
+</html>

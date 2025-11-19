@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danger - Supprimer le compte</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="img/logo-removebg-preview (1).png" type="image/x-icon">
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+
+        .sidebar {
+            min-width: 212px;
+            max-width: 212px;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <div class="flex h-screen overflow-hidden">
+
+        <aside class="sidebar bg-white border-r flex flex-col">
+
+            <a href="accueil.html">
+                <div class="p-4 flex items-center gap-3">
+                    <div
+                        class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold text-sm">
+                        <img src="img/logo-removebg-preview (1).png" alt="">
+                    </div>
+                    <span class="font-semibold text-gray-900">Codelynx</span>
+                </div>
+            </a>
+
+
+            <div class="px-4 py-3 flex items-center justify-between cursor-pointer hover:bg-gray-50">
+                <span class="text-sm text-gray-700">Votre profil</span>
+                <i class="bi bi-chevron-down text-xs text-gray-500"></i>
+            </div>
+
+
+            <nav class="flex-1 px-2">
+                <a href="accueil.html"
+                    class="flex items-center gap-3 px-3 py-2.5 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">
+                    <i class="bi bi-house text-base"></i>
+                    <span>Accueil</span>
+                </a>
+                <a href="profil.html"
+                    class="flex items-center gap-3 px-3 py-2.5 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">
+                    <i class="bi bi-person text-base"></i>
+                    <span>Profil</span>
+                </a>
+                <a href="information.html"
+                    class="flex items-center gap-3 px-3 py-2.5 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">
+                    <i class="bi bi-credit-card text-base"></i>
+                    <span>Informations de facturation</span>
+                </a>
+                <a href="dange.html"
+                    class="flex items-center gap-3 px-3 py-2.5 text-sm text-gray-700 hover:bg-gray-100 rounded-lg">
+                    <i class="bi bi-exclamation-circle text-base"></i>
+                    <span>Danger</span>
+                </a>
+            </nav>
+
+
+            <div class="p-4 border-t">
+                <div class="flex items-center gap-3">
+                    <img src="img/2.png" class="w-10 h-10 rounded-full">
+                    <div class="flex-1 min-w-0">
+                        <div class="text-sm font-medium text-gray-900 truncate">Codeur</div>
+                        <div class="text-xs text-gray-500 truncate">ifran.prepa@gmail.com</div>
+                    </div>
+                    <i class="bi bi-chevron-down text-xs text-gray-400"></i>
+                </div>
+            </div>
+        </aside>
+
+
+        <main class="flex-1 overflow-y-auto bg-gray-50">
+            <div class="p-8">
+
+                <div class="flex items-center justify-between mb-8">
+                    <h1 class="text-3xl font-bold text-gray-900">Paramètres de Codeur</h1>
+                    <button
+                        class="px-4 py-2 bg-white border border-gray-200 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-50">
+                        Se déconnecter
+                    </button>
+                </div>
+
+
+                <section class=" w-full max-w-2xl bg-white ml-100 mt-5">
+                    <div class="shadow rounded-lg  p-8 col-span-5">
+                        <div class="flex">
+                            <i class="bi bi-exclamation-triangle w-5 h-5"></i>
+                            <h4 class="ml-2 font-bold">Supprimer le compte</h4>
+                        </div>
+                        <p class="opacity-45">Cette action supprimera définitivement votre compte et toutes les données
+                            associées.
+                        </p>
+                        <div class="flex border border-gray-300 p-3 rounded-xl mt-10">
+                            <i class="bi bi-person w-5 h-5"></i>
+                            <div class="ml-5">
+                                <h4 class=" font-medium">Données personnelles</h4>
+                                <p class=" opacity-45">Toutes vos informations personnelles et vos paramètres seront
+                                    supprimés définitivement.</p>
+
+                            </div>
+                        </div>
+                        <div class="flex border border-gray-300 p-3 rounded-xl mt-4">
+                            <i class="bi bi-houses w-5 h-5"></i>
+                            <div class="ml-5">
+                                <h4 class=" font-medium">Données de l'école</h4>
+                                <p class=" opacity-45">Si vous êtes propriétaire d'une école, toutes les données de
+                                    l'école seront supprimées et les abonnements seront annulés.</p>
+
+                            </div>
+
+                        </div>
+                        <p class="mt-8 text-white bg-red-600 w-fit p-2 text-sm font-medium rounded-lg ">Supprimer le
+                            compte
+                        </p>
+                    </div>
+            </div>
+        </main>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+
+</html>
